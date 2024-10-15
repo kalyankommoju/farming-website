@@ -1,0 +1,318 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Top bar */
+.top-bar {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.top-bar .contact {
+    color: #2c3e50;
+    font-size: 1em;
+}
+
+.top-bar .social a {
+    margin-left: 15px;
+    color: #2c3e50;
+    font-size: 1.2em;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #27ae60;
+    padding: 15px 20px;
+    color: white;
+}
+
+.navbar .logo h1 {
+    font-size: 1.8em;
+    margin: 0;
+    color: #f39c12;
+}
+
+.navbar nav ul {
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin-left: 20px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    font-size: 1em;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    background-color: #2ecc71;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('https://png.pngtree.com/background/20211215/original/pngtree-agricultural-production-summer-solstice-farmer-rice-field-planting-photography-map-with-picture-image_1500018.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.hero-buttons a {
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.hero-buttons a.btn-orange {
+    background-color: #f39c12;
+}
+
+.hero-buttons a:hover {
+    background-color: #2ecc71;
+}
+
+.hero-buttons a.btn-orange:hover {
+    background-color: #e67e22;
+}
+
+/* Products Section */
+.products {
+    padding: 50px;
+    background-color: #ecf0f1;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 20px; /* Space between cards */
+    justify-items: center; /* Center items in the grid */
+}
+
+.product {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Ensure the card takes full space */
+    max-width: 250px; /* Ensure cards don't become too large */
+}
+
+.product:hover {
+    transform: translateY(-10px) scale(1.05); /* Slight lift and scale */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product h3 {
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #27ae60;
+}
+
+.product p {
+    font-size: 1.1em;
+    color: #e67e22;
+}
+
+.product a {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.product a:hover {
+    background-color: #2ecc71;
+}
+
+@media (max-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row for smaller screens */
+    }
+}
+
+@media (max-width: 800px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row for tablet screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* 1 card per row for mobile screens */
+    }
+}
+
+.services-section {
+    padding: 50px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.services-section p {
+    font-size: 1.2em;
+    color: #7f8c8d;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.service {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.service i {
+    font-size: 3em;
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
+.service h3 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.service p {
+    font-size: 1em;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+.service-btn {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.service-btn:hover {
+    background-color: #2ecc71;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 900px) {
+    .service-buttons {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Contact Section */
+.contact-section {
+    padding: 50px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    color: #27ae60;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.2em;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #27ae60;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1em;
+}
